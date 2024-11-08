@@ -1,0 +1,45 @@
+# Ignore Python cache and environment files
+backend/__pycache__/
+backend/*.py[cod]
+backend/.env
+backend/env/
+backend/venv/
+backend/.venv/
+backend/*.egg-info
+backend/build/
+backend/dist/
+backend/.pytest_cache/
+
+# Ignore Node.js dependencies and build files
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Ignore Docker-related files and logs
+**/docker-compose.override.yml
+**/*.log
+**/*.pid
+
+# Ignore Terraform and Ansible cache and temporary files
+infra/terraform/.terraform/
+infra/terraform/*.tfstate
+infra/terraform/*.tfstate.*
+infra/terraform/terraform.tfvars
+infra/terraform/.terraform.lock.hcl
+infra/ansible/.cache/
+infra/ansible/.retry
+infra/ansible/inventory/*_cache
+
+# System and IDE specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
