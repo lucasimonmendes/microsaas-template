@@ -1,19 +1,25 @@
-# Use uma imagem Python otimizada para FastAPI
-FROM python:3.11-slim
+# Usando a imagem oficial do Node.js
+FROM node:18
 
-# Definir o diretório de trabalho dentro do contêiner
+# Diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copiar arquivos de requisitos e instalar as dependências
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copiar o package.json e o package-lock.json (ou yarn.lock) para instalar as dependências
+COPY package*.json ./
 
-# Copiar o código do backend para o diretório de trabalho no contêiner
+# Instalar as dependências do projeto
+RUN npm install
+
+# Copiar o restante do código da aplicação para o contêiner
 COPY . .
 
-# Expor a porta onde o FastAPI será executado
-EXPOSE 8000
+# Expor a porta que o Fastify vai escutar
+EXPOSE 3000
 
-# Comando para iniciar o FastAPI com Uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# Definir a variável de ambiente que pode ser usada no código, como o DB_URL, SECRET_KEY, etc.
+ENV DATABASE_URL=postgres://user:password@localhost:5432/mydb
+ENV SECRET_KEY=mysecretkey
+
+# Comando para rodar a aplicação (iniciando o servidor Fastify)
+CMD ["node", "index.js"]
 
