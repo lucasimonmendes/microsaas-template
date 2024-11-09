@@ -1,5 +1,9 @@
 # MicroSaaS Template
 
+![Linguagem mais utilizada](https://img.shields.io/github/languages/top/lucasimonmendes/microsaas-template)
+![Último commit](https://img.shields.io/github/last-commit/lucasimonmendes/microsaas-template)
+![README bem legal](https://img.shields.io/badge/readme-bem_legal-8A2BE2)
+
 Este é um template de microSaaS completo, projetado para facilitar o desenvolvimento de aplicativos SaaS modulares. Ele inclui um backend (FastAPI ou Express.js), um frontend (React ou Vue), e infraestrutura para deploy automatizado com Docker, Terraform, Ansible e Kubernetes.
 
 ## Índice
