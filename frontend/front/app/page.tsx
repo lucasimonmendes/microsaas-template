@@ -45,6 +45,12 @@ export default function Home() {
               Landing Page
             </Link>
             <Link
+              href="/about"
+              className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              Test API
+            </Link>
+            <Link
               href="https://github.com/lucasimonmendes"
               className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
             >
