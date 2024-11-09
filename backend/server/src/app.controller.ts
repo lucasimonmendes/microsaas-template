@@ -17,4 +17,9 @@ export class AppController {
       return { url: 'https://blog.s1m0n.tech' };
     }
   }
+
+  @Get('/homeinfos')
+  getHomeInfos(): object {
+    return this.appService.getHomeInfos();
+  }
 }
